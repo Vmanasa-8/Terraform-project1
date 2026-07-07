@@ -1,2 +1,14 @@
-# Terraform-project1
-A beginner-friendly Terraform project that automates AWS infrastructure provisioning using Infrastructure as Code (IaC).
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 6.0"
+    }
+  }
+
+  required_version = ">= 1.5.0"
+}
+
+provider "aws" {
+  region = var.aws_region
+}
